@@ -400,6 +400,11 @@ namespace Microsoft.MixedReality.Toolkit.UI
                         rollOffTimer = RollOffTime;
                     }
 
+                    if (VoiceRequiresFocus)
+                    {
+                        RegisterHandler<IMixedRealitySpeechHandler>(value);
+                    }
+
                     SetState(InteractableStates.InteractableStateEnum.Focus, value);
                 }
             }
